@@ -37,5 +37,14 @@ class ApiController extends Controller
         return response()->json($brief);
     }
 
-    public function
+    public function update(Request $request,$id){
+        $brief = Brief::find($id);
+
+        $brief->nameBrief = $request->nameBrief;
+        $brief->detailBrief = $request->detailBrief;
+        // $brief->starDate = $request->starDate;
+        // $brief->endDate = $request->endDate;
+        $brief->save();
+        return $brief;
+    }
 }
