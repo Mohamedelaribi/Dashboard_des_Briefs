@@ -18,4 +18,24 @@ class ApiController extends Controller
 
         return response()->json($brief);
     }
+
+    public function index(){
+        $briefs = Brief::all();
+
+        return response()->json($briefs);
+    }
+
+    public function destroy($id){
+        $brief = Brief::find($id);
+        $brief->delete();
+        return response()->json($brief);
+    }
+
+
+    public function edit($id){
+        $brief = Brief::find($id);
+        return response()->json($brief);
+    }
+
+    public function
 }
