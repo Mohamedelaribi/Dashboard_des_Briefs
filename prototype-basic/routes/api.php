@@ -19,8 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/brief', [ApiController::class,'store']);
+Route::post('/addBrief', [ApiController::class,'store']);
 Route::get('/brief', [ApiController::class,'index']);
-Route::delete('/brief/{id}', [ApiController::class,'destroy']);
+Route::delete('/deleteBrief/{id}', [ApiController::class,'destroy']);
 Route::get('/brief/{id}', [ApiController::class,'edit']);
 Route::put('/brief/{id}', [ApiController::class,'update']);

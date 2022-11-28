@@ -13,6 +13,17 @@ function Brief() {
     setBriefs(reasponse.data);
     });
   },[]);
+
+
+
+    const deleteBrief= (id, e)=>{
+      e.preventDefault();
+      const thisbrief = e.currentTarget;
+      axios.delete(`http://127.0.0.1:8000/api/deleteBrief/${id}`).then(res=>{
+        setBriefs(briefs.filter((item)=>item.id !== Number(id)));
+    });
+      
+    }
   return (
     <div>
         <Nav/>
@@ -21,8 +32,8 @@ function Brief() {
           <div>
             {briefs.map(Brief=>(
               <div key={Brief.id}>
-                <h3>{Brief.nameBrief}</h3>
-                <h3>{Brief.detailBrief}</h3>
+                <tr>{Brief.nameBrief}</tr>
+                <button onClick={(e)=>deleteBrief(Brief.id, e)}>delete</button>
             </div>
             ))}
           </div>

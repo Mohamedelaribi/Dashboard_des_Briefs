@@ -11,7 +11,7 @@ class ApiController extends Controller
 
         $brief->nameBrief = $request->input('nameBrief');
         $brief->detailBrief = $request->input('detailBrief');
-        $brief->starDate = $request->input('starDate');
+        $brief->startDate = $request->input('startDate');
         $brief->endDate = $request->input('endDate');
 
         $brief->save();
@@ -27,8 +27,18 @@ class ApiController extends Controller
 
     public function destroy($id){
         $brief = Brief::find($id);
-        $brief->delete();
-        return response()->json($brief);
+        if($brief){
+              $brief->delete();
+        return response()->json([
+            'status'=>204
+        ]);
+        }else{
+            return response()->json([
+                'status'=>404
+            ]);
+        }
+
+
     }
 
 
