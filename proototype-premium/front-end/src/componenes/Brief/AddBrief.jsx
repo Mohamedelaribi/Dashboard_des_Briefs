@@ -1,4 +1,5 @@
 import React from 'react'
+import Nav from '../Header/Nav';
 import axios from 'axios'
 import {useState} from 'react';
 
@@ -34,6 +35,7 @@ const AddBrief = ()=> {
 
   return (
     <div>
+      <Nav />
         <form onSubmit={(e)=>submit(e)} >
             <input name='nameBrief' value={Brief.name} onChange={handle} type="text"  id='name' />
             <input name='detailBrief' value={Brief.detail} onChange={handle} type="text"  id='detail' />

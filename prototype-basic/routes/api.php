@@ -23,4 +23,4 @@ Route::post('/brief', [ApiController::class,'store']);
 Route::get('/brief', [ApiController::class,'index']);
 Route::delete('/brief/{id}', [ApiController::class,'destroy']);
 Route::get('/brief/{id}', [ApiController::class,'edit']);
-Route::put('/brief/{id}', [ApiController::class,'update']);
+Route::post('/brief/{id}', [ApiController::class,'update']);

@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Nav from './Nav'
+import Nav from '../Header/Nav'
 
 function Brief() {
 
@@ -30,7 +30,7 @@ function Brief() {
           <Link to='/AddBrief'>Ajouter Brief</Link>
           <div>
 
-          <table class="table">
+          <table className="table">
   <thead>
     <tr>
       <th scope="col">name brief</th>
@@ -48,7 +48,7 @@ function Brief() {
       <td>{Brief.startDate}</td>
       <td>{Brief.endDate}</td>
       <td><button onClick={(e)=>deleteBrief(Brief.id, e)}>delete</button>
-      <Link to={'/edite/$'}>edit</Link></td>
+      <Link to={`/editeBrief/${Brief.id}`}>edit</Link></td>
     </tr>
 ))}
   </tbody>
