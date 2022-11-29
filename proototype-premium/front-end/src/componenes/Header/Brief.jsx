@@ -18,8 +18,7 @@ function Brief() {
 
     const deleteBrief= (id, e)=>{
       e.preventDefault();
-      const thisbrief = e.currentTarget;
-      axios.delete(`http://127.0.0.1:8000/api/deleteBrief/${id}`).then(res=>{
+      axios.delete(`http://127.0.0.1:8000/api/brief/${id}`).then(res=>{
         setBriefs(briefs.filter((item)=>item.id !== Number(id)));
     });
       
@@ -30,12 +29,31 @@ function Brief() {
           <h1>Brief</h1>
           <Link to='/AddBrief'>Ajouter Brief</Link>
           <div>
-            {briefs.map(Brief=>(
-              <div key={Brief.id}>
-                <tr>{Brief.nameBrief}</tr>
-                <button onClick={(e)=>deleteBrief(Brief.id, e)}>delete</button>
-            </div>
-            ))}
+
+          <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name brief</th>
+      <th scope="col">detail brief</th>
+      <th scope="col">start Date</th>
+      <th scope="col">end Date</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {briefs.map(Brief=>(            
+    <tr key={Brief.id}>
+      <td>{Brief.nameBrief}</td>
+      <td>{Brief.detailBrief}</td>
+      <td>{Brief.startDate}</td>
+      <td>{Brief.endDate}</td>
+      <td><button onClick={(e)=>deleteBrief(Brief.id, e)}>delete</button>
+      <Link to={'/edite/$'}>edit</Link></td>
+    </tr>
+))}
+  </tbody>
+</table>
+            
           </div>
         
     </div>
