@@ -27,16 +27,8 @@ class ApiController extends Controller
 
     public function destroy($id){
         $brief = Brief::find($id);
-        if($brief){
-              $brief->delete();
-        return response()->json([
-            'status'=>204
-        ]);
-        }else{
-            return response()->json([
-                'status'=>404
-            ]);
-        }
+        $brief->delete();
+        return response()->json($brief);
 
 
     }

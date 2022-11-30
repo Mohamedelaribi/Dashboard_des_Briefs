@@ -22,9 +22,9 @@ const AddBrief = ()=> {
 
     function submit(e){
       e.preventDefault();
-      axios.post('http://127.0.0.1:8000/api/addBrief',{
-        nameBrief:Brief.nameBrief,
-        detailBrief:Brief.detailBrief,
+      axios.post('http://127.0.0.1:8000/api/brief',{
+        nameBrief:Brief.name,
+        detailBrief:Brief.detail,
         startDate:Brief.startDate,
         endDate:Brief.endDate
       })
