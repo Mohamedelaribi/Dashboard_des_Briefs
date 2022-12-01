@@ -3,82 +3,52 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Apprenant;
 
 class GestionApprenant extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $apprenant = Apprenant::all();
+        return response()->json($apprenant);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        
+        $apprenant = new Apprenant;
+        $apprenant->promotion_id = $request->promotion_id;
+        $apprenant->firstName = $request->firstName;
+        $apprenant->lastName = $request->lastName;
+        $apprenant->email = $request->email;
+        $apprenant->save();
+        return response()->json($apprenant);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $editApprenant = Apprenant::find($id);
+        return response()->json($editApprenant);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $updateApprenant = Apprenant::find($id);
+        $updateApprenant->firstName = $request->newFirstName;
+        $updateApprenant->lastName = $request->newLastName;
+        $updateApprenant->email = $request->newEmail;
+        $updateApprenant->save();
+        return response()->json($updateApprenant);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+       $destroyApprenant= Apprenant::find($id);
+       $destroyApprenant->delete();
+       return response()->json($destroyApprenant);
     }
 }

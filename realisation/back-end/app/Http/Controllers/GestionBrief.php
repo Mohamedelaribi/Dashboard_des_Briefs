@@ -3,82 +3,53 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Brief;
 
 class GestionBrief extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $brief = Brief::all();
+        return response()->json($brief);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+      
+        $brief = new Brief();
+        $brief->promotion_id = $request->promotion_id;
+        $brief->nameBrief = $request->nameBrief;
+        $brief->detailBrief = $request->detailBrief;
+        $brief->startDate = $request->startDate;
+        $brief->endDate = $request->endDate;
+        $brief->save();
+        return response()->json($brief);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $editBrief = Brief::find($id);
+        return response()->json($editBrief);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $updateBrief = Brief::find($id);
+        $updateBrief->promotion_id = $request->promotion_id;
+        $updateBrief->nameBrief = $request->newNameBrief;
+        $updateBrief->detailBrief = $request->newDetailBrief;
+        $updateBrief->startDate = $request->newStartDate;
+        $updateBrief->endDate = $request->newEndDate;
+        $updateBrief->save();
+        return response()->json($updateBrief);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        $destroyBrief = Brief::find($id);
+        $destroyBrief->delete();
+        return response()->json($destroyBrief);
     }
 }

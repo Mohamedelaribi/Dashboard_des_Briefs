@@ -55,6 +55,8 @@ class GestionPromotion extends Controller
 
     public function destroy($id)
     {
-        
+        $destroyPromotion = Promotion::find($id);
+        $destroyPromotion->delete();
+        return response()->json($destroyPromotion);
     }
 }
