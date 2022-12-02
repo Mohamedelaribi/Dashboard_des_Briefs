@@ -15,11 +15,6 @@ return new class extends Migration
     {
         Schema::create('briefs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("promotion_id");
-            $table->foreign('promotion_id')
-            ->references("id")
-            ->on("promotions")
-            ->onDelete("cascade");
             $table->string("nameBrief");
             $table->string("detailBrief");
             $table->date("startDate");
