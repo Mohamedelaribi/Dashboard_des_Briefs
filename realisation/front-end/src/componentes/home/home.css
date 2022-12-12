@@ -1,0 +1,19 @@
+.detailPromotionCard {
+    width: 40rem;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 50px;
+    border: 1px solid;
+    border-color: rgba(128, 128, 128, 0.39);
+}
+
+.detailPromotion{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.infoPromotion{
+    margin-left: 20px;
+}

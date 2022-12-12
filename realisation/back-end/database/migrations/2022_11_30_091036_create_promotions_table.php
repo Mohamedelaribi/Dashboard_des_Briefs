@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string("namePromotion");
             $table->string("descriptionPromotion");
-            $table->char("numberLearners");
             $table->date("startAt");
             $table->date("endAt");
             $table->timestamps();

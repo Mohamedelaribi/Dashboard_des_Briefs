@@ -1,0 +1,27 @@
+.sideBar{
+    width: 10rem;
+    height:200vh;
+    position: sticky;
+    top: 50px;
+}
+
+.ulList{
+    position: sticky;
+    top: 10px;
+}
+
+.linksItem{
+    display: flex;
+    align-items: center;
+    padding: 20px; 
+    color: #2b3641b0;
+
+}
+
+.linkItemTitle{
+    margin:10px;
+}
+
+.linksItem.active{
+    color: #FF7A00;
+}

@@ -16,11 +16,10 @@ class GestionPromotion extends Controller
 
     public function store(Request $request)
     {
-        $promotion = new Promotion; 
+        $promotion = new Promotion;
 
         $promotion->namePromotion = $request->namePromotion;
-        $promotion->descriptionPromotion = $request->descriptionPromotion;	
-        $promotion->numberLearners  = $request->numberLearners;
+        $promotion->descriptionPromotion = $request->descriptionPromotion;
         $promotion->startAt = $request->startAt;
         $promotion->endAt = $request->endAt;
         $promotion->save();
@@ -29,7 +28,7 @@ class GestionPromotion extends Controller
 
     public function show($id)
     {
-        
+
     }
 
     public function edit($id)

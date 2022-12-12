@@ -1,0 +1,20 @@
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 23px 28px;
+}
+
+.Logo{
+    width: 100px;
+}
+
+
+.searcheInput{
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: grey;
+    height: 30px;
+    width: 250px;
+}
