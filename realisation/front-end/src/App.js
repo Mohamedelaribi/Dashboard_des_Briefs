@@ -17,14 +17,14 @@ function App() {
         <TopBar/>
         <div className='container'>
             <SidBar/>
-        <div className='rightcontaint'>
-        <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Promotion' element={<Promotion/>}/>
-        <Route path='/Apprenant' element={<Apprenant/>}/>
-        <Route path='/Brief' element={<Brief/>}/>
-        <Route path='/AddPromotion' element={<AddPromotion/>}/>
-        </Routes>
+          <div className='rightcontaint'>
+          <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/Promotion' element={<Promotion/>}/>
+          <Route path='/Apprenant' element={<Apprenant/>}/>
+          <Route path='/Brief' element={<Brief/>}/>
+          <Route path='/AddPromotion' element={<AddPromotion/>}/>
+          </Routes>
         </div>
 
         </div>

@@ -35,24 +35,24 @@ function AddPromotion() {
 
         <div>
           <label htmlFor="namePromortion">Nom Promotion: </label>
-          <input type="text" name="namePromotion" placeholder='entre le nom ' />
+          <input type="text" name="namePromotion" onChange={handle} placeholder='entre le nom ' />
         </div>
 
         <div>
           <label htmlFor="descriptionPromotion">description Promotion: </label>
-          <input type="text" name="descriptionPromotion" placeholder='entre la description' />
+          <input type="text" name="descriptionPromotion" onChange={handle} placeholder='entre la description' />
         </div>
 
         <div>
           <label htmlFor="startAt">date debut: </label>
-          <input type="date" name="startAt"/>
+          <input type="date" name="startAt" onChange={handle} />
         </div>
         
         <div>
           <label htmlFor="endAt">Nom Promotion: </label>
-          <input type="date" name="endAt" />
+          <input type="date" name="endAt" onChange={handle}  />
         </div>
-
+        <button type='submit'>add promotion </button>
        </form>
     </div>
   )
