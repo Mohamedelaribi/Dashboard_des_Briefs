@@ -18,9 +18,9 @@ class GestionBrief extends Controller
     {
       
         $brief = new Brief();
-        $brief->promotion_id = $request->promotion_id;
         $brief->nameBrief = $request->nameBrief;
         $brief->detailBrief = $request->detailBrief;
+        $brief->imageBrief = $request->imageBrief;
         $brief->startDate = $request->startDate;
         $brief->endDate = $request->endDate;
         $brief->save();

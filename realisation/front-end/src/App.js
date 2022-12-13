@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Promotion from './componentes/promotions/Promotion';
 import AddPromotion from './componentes/promotions/AddPromotion';
+import EditPromotion from './componentes/promotions/EditPromotion';
 import Apprenant from './componentes/apprenants/Apprenant';
 import Brief from './componentes/briefs/Brief';
 import Home from './componentes/home/Home';
@@ -21,9 +22,12 @@ function App() {
           <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/Promotion' element={<Promotion/>}/>
+          <Route path='/AddPromotion' element={<AddPromotion/>}/>
+          <Route path='/promotion/:id/edit' element={<EditPromotion/>}/>
           <Route path='/Apprenant' element={<Apprenant/>}/>
           <Route path='/Brief' element={<Brief/>}/>
-          <Route path='/AddPromotion' element={<AddPromotion/>}/>
+          
+          
           </Routes>
         </div>
 

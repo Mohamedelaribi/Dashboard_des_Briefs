@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nameBrief");
             $table->string("detailBrief");
+            $table->string("imageBrief");
             $table->date("startDate");
             $table->date("endDate");
             $table->timestamps();

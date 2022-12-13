@@ -14,5 +14,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::resource('/promotion', GestionPromotion::class);
-Route::resource('/promotion.brief', GestionBrief::class)->shallow();
+Route::resource('/brief', GestionBrief::class)->shallow();
 Route::resource('/promotion.apprenant', GestionApprenant::class)->shallow();
