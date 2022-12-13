@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom'
 import './style/promotion.css'
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 function Promotion() {
 
         const [Promotions, setPromotion] = useState([])
@@ -27,7 +29,15 @@ function Promotion() {
 
   return (
     <div className='promottionList'>
+
+
+            
+              {/* <Popup trigger={<button> Trigger</button>} position="right center">
+                <div>Popup content here !!</div>
+              </Popup> */}
+            
         <Link to ={'/AddPromotion'} style={{color:"white"}}><button className='addPromotionButton'> ajouter Promotion</button></Link>
+        
         <div className='containerPromotion'>
 
           {Promotions.map(promotion =>(

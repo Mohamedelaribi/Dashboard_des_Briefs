@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import './style/promotion.css'
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -31,28 +32,21 @@ function AddPromotion() {
 
   return (
     <div className='addPromotion'>
-       <form onSubmit={(e)=>sendData(e)}>
-
-        <div>
-          <label htmlFor="namePromortion">Nom Promotion: </label>
+       <form className='formPromotion' onSubmit={(e)=>sendData(e)}>
+        <h3 className='titleForm'>Ajouter Un Promotion</h3>
+        <div className='formInputs'>
           <input type="text" name="namePromotion" onChange={handle} placeholder='entre le nom ' />
-        </div>
 
-        <div>
-          <label htmlFor="descriptionPromotion">description Promotion: </label>
           <input type="text" name="descriptionPromotion" onChange={handle} placeholder='entre la description' />
-        </div>
-
-        <div>
-          <label htmlFor="startAt">date debut: </label>
-          <input type="date" name="startAt" onChange={handle} />
-        </div>
         
-        <div>
-          <label htmlFor="endAt">Nom Promotion: </label>
+          <input type="date" name="startAt" onChange={handle} />       
+  
           <input type="date" name="endAt" onChange={handle}  />
+
         </div>
-        <button type='submit'>add promotion </button>
+          <div className='divButtonForm'>
+            <button className='buttonForm' type='submit'>add promotion </button>
+          </div>
        </form>
     </div>
   )

@@ -46,3 +46,57 @@
     display: grid;
     gap: 2rem;
 }
+
+
+
+
+.addPromotion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: auto;
+}
+
+.titleForm{
+    text-align: center;
+    margin: 5px;
+}
+
+
+.formPromotion{
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 40vh;
+    height: 50vh;
+}
+
+
+.formInputs{
+    display: grid;
+    height: 40;
+}
+
+.formInputs >input{
+    height: 30px;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 3px 0px 3px 13px;
+}
+
+.divButtonForm{
+    text-align: center;
+}
+.buttonForm{
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    width: 9rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+
+
