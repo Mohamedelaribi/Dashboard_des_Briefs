@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { Link } from 'react';
+import { Link } from 'react-router-dom';
+import './style/briefs.css'
+import ImageBrief from '../../images/images.png'
 function Brief() {
 
   const [Briefs, setBriefs]= useState([])
@@ -24,9 +26,19 @@ function Brief() {
         {Briefs.map(brief=>(
           <div className="briefCard" key={brief.id}>
             <div className="briefImage">
-              <img src="" alt="" />
+              <Link to={'/ConsulterBrief'}>
+              <img src={ImageBrief} alt="" />
+              </Link>
             </div>
-            <h2 className='titleBrief'>{brief.nameBrief}</h2>
+            <div className="contentCard">
+              <h2 className='titleBrief'>{brief.nameBrief}</h2>
+              <p className="detailBrief">{brief.detailBrief}</p>
+            </div>
+            <div className="buttons">
+              <Link to={'/plusDetail'}><button className='addBriefButton'>Plus Detail</button></Link>
+              <Link to={'/plusDetail'}><button className='TachesButton'>Taches</button></Link>
+            </div>
+            
           </div>
         ))}
       </div>

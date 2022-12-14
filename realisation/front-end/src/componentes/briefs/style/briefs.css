@@ -1,0 +1,64 @@
+.briefContainer{
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px 10px auto 40px;
+}
+
+.addBriefButton{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.listBrief{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.briefCard{
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color: white;
+    text-align: left;
+
+}
+
+.briefImage > img{
+    width: 297px;
+    border-radius: 29px 29px 0px 0px;
+
+}
+
+
+.contentCard{
+    padding: 5px;
+    max-width: 250px;
+    margin: 10px;
+}
+.titleBrief{
+    margin: 10px;
+    color: #2B3641;
+}
+
+.detailBrief{
+    margin-left: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.TachesButton{
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 30px;
+    width: 80px;
+}

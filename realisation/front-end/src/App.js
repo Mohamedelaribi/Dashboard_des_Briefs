@@ -9,6 +9,7 @@ import Brief from './componentes/briefs/Brief';
 import Home from './componentes/home/Home';
 import SidBar from './componentes/SideBar/SideBar';
 import TopBar from './componentes/topBar/TopBar';
+import ConsulterBrief from './componentes/briefs/ConsulterBrief';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/promotion/:id/edit' element={<EditPromotion/>}/>
           <Route path='/Apprenant' element={<Apprenant/>}/>
           <Route path='/Brief' element={<Brief/>}/>
+          <Route path='/ConsulterBrief' element={<ConsulterBrief/>}/>
           
           
           </Routes>
