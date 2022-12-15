@@ -16,7 +16,7 @@
 .listBrief{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: 40px;
     margin: 20px;
 }
 
@@ -25,6 +25,8 @@
     border-radius: 30px;
     background-color: white;
     text-align: left;
+    position: relative;
+    height: 409px;
 
 }
 
@@ -52,7 +54,11 @@
 .buttons{
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    margin: 10px;
+    position: absolute;
+    bottom: 0px;
+    gap: 50px;
+    left: 30px;
 }
 
 .TachesButton{
@@ -61,4 +67,5 @@
     padding: 5px;
     border-radius: 30px;
     width: 80px;
+    cursor: pointer;
 }

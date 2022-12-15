@@ -9,6 +9,6 @@ class Promotion extends Model
 {
     use HasFactory;
     public function apprenant(){
-        return $this-hasMany(Apprenant::class);
+        return $this->hasMany(Apprenant::class);
     }
 }

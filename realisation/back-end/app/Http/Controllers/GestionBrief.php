@@ -16,7 +16,7 @@ class GestionBrief extends Controller
 
     public function store(Request $request)
     {
-      
+
         $brief = new Brief();
         $brief->nameBrief = $request->nameBrief;
         $brief->detailBrief = $request->detailBrief;

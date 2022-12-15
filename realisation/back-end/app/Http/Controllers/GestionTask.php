@@ -4,21 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\Brief;
 
 class GestionTask extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $getAllTasks = Task::all();
-        return response()->json($getAllTasks);
+        $getTasks = Brief::find($id);
+        $getTasks->task;
+        return response()->json($getTasks);
     }
 
     public function store(Request $request)
     {
-        $task = new Task; 
+        $task = new Task;
 
         $task->nameTask = $request->nameTask;
-        $task->brief_id = $request->brief_id;	
+        $task->brief_id = $request->brief_id;
         $task->startDate = $request->startDate;
         $task->endDate = $request->endDate;
         $task->save();
@@ -27,13 +29,13 @@ class GestionTask extends Controller
 
     public function show($id)
     {
-        
+
     }
 
     public function edit($id)
     {
-        $getTask = Promotion::find($id);
-        return response()->json($getTask);
+        $getTasks = Task::find($id);
+        return response()->json($getTasks);
     }
 
     public function update(Request $request, $id)

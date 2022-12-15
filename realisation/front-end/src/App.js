@@ -10,6 +10,7 @@ import Home from './componentes/home/Home';
 import SidBar from './componentes/SideBar/SideBar';
 import TopBar from './componentes/topBar/TopBar';
 import ConsulterBrief from './componentes/briefs/ConsulterBrief';
+import Task from './componentes/briefs/Task';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/Apprenant' element={<Apprenant/>}/>
           <Route path='/Brief' element={<Brief/>}/>
           <Route path='/ConsulterBrief' element={<ConsulterBrief/>}/>
+          <Route path='Brief/:id/tasks' element={<Task/>}/>
           
           
           </Routes>
