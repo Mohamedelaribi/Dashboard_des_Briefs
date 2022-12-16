@@ -10,7 +10,7 @@ import './style/briefs.css';
 
 function Task() {
 
-  const[Tasks ,setTask] = useState([])
+  const[Tasks ,setTask] = useState({task:[]})
   const{id}=useParams();
   useEffect(()=>{
     axios.get(`http://127.0.0.1:8000/api/brief/${id}/tasks`).then((response)=>{
@@ -24,23 +24,24 @@ function Task() {
     <div className='taskContainer'>
       <h2 className='nameBrief'>{Tasks.nameBrief}</h2>
       <div className="taskList">
-        {Tasks.map(task=>(
-          <div className="cardTask">
-              <h2 className='titleTask'>{task.nameTask}</h2>
+        {Tasks.task.map(item=>(
+            <div className="cardTask" key={item.id}>
+              <h2 className='titleTask'>TASK1</h2>
             <div className="taskNameContainer">
               <h3 className="nameOfTask">Nom De Tache:</h3>
-              <h3 className="taskName"></h3>
+              <h3 className="taskName">{item.nameTask}</h3>
             </div>
             <div className="StartDateContainer">
               <p className="startDateOfTask">Date/Heure de debut:</p>
-              <p className="taskStartDate">11/01/2022 10:00</p>
+              <p className="taskStartDate">{item.startDate}</p>
             </div>
             <div className="endDateContainer">
               <p className="endDateOfTask">Date/Heure de debut:</p>
-              <p className="taskEndtDate">11/01/2022 10:00</p>
+              <p className="taskEndtDate">{item.endDate}</p>
             </div>
         </div>
         ))}
+
   
       </div>
     </div>

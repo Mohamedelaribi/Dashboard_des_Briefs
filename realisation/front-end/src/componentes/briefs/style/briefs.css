@@ -16,7 +16,7 @@
 .listBrief,.taskList{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 40px;
+    gap: 20px;
     margin: 20px;
 }
 
@@ -79,7 +79,7 @@
 .cardTask{
     border: #2B3641 1px solid;
     border-radius: 30px;
-    width: 19rem;
+    width: 18rem;
     padding: 15px;
     background-color: white;
 }
@@ -92,7 +92,7 @@
 
 .taskNameContainer,.StartDateContainer,.endDateContainer{
     display: flex;
-    gap: 25px;
+    gap: 20px;
     color: #2B3641;
     margin: 35px 5px;
 }
