@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 
-.listBrief{
+.listBrief,.taskList{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
@@ -69,3 +69,31 @@
     width: 80px;
     cursor: pointer;
 }
+
+
+.nameBrief{
+    text-align: center;
+}
+
+
+.cardTask{
+    border: #2B3641 1px solid;
+    border-radius: 30px;
+    width: 19rem;
+    padding: 15px;
+    background-color: white;
+}
+
+.titleTask{
+    text-align: center;
+    color: #2B3641;
+    margin: 5px;
+}
+
+.taskNameContainer,.StartDateContainer,.endDateContainer{
+    display: flex;
+    gap: 25px;
+    color: #2B3641;
+    margin: 35px 5px;
+}
+
