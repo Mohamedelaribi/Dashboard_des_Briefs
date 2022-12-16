@@ -12,4 +12,8 @@ class Apprenant extends Model
     public function brief(){
         return $this->hasMany(Brief::class);
     }
+
+    public function task(){
+        return $this->hasMany(Task::class);
+    }
 }

@@ -2,7 +2,9 @@ import React from 'react'
 
 function ConsulterBrief() {
   return (
-    <div>ConsulterBrief</div>
+    <div className='containerConsulterBrief'>
+      
+    </div>
   )
 }
 

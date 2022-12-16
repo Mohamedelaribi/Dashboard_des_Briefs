@@ -12,4 +12,8 @@ class Task extends Model
     public function brief(){
         return $this->belongsTo(Brief::class);
     }
+
+    public function apprenant(){
+        return $this->hasMany(Apprenant::class)
+    }
 }
