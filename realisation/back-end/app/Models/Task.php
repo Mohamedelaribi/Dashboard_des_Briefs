@@ -14,6 +14,6 @@ class Task extends Model
     }
 
     public function apprenant(){
-        return $this->hasMany(Apprenant::class)
+        return $this->hasMany(Apprenant::class);
     }
 }

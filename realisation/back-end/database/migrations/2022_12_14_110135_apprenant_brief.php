@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('apprenant_id');
             $table->unsignedBigInteger('brief_id');
+            $table->char('statu')->default('NULL');
             $table->foreign('apprenant_id')->references("id")->on('apprenants')
             ->onDelete('cascade');
             $table->foreign('brief_id')->references("id")->on('briefs')
             ->onDelete('cascade');
 
-            
+
             $table->timestamps();
         });
     }

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger("brief_id");
             $table->foreign("brief_id")->references("id")->on("briefs")->onDelete("cascade");
             $table->string("nameTask");
-            $table->date("startDate");
-            $table->date("endDate");
+            $table->dateTime("startDate");
+            $table->dateTime("endDate");
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ function Brief() {
         {Briefs.map(brief=>(
           <div className="briefCard" key={brief.id}>
             <div className="briefImage">
-              <Link to={'/ConsulterBrief'}>
+              <Link to={`/ConsulterBrief/${brief.id}`}>
               <img src={ImageBrief} alt="" />
               </Link>
             </div>

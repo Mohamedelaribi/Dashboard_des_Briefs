@@ -28,7 +28,7 @@ function App() {
           <Route path='/promotion/:id/edit' element={<EditPromotion/>}/>
           <Route path='/Apprenant' element={<Apprenant/>}/>
           <Route path='/Brief' element={<Brief/>}/>
-          <Route path='/ConsulterBrief' element={<ConsulterBrief/>}/>
+          <Route path='/ConsulterBrief/:id' element={<ConsulterBrief/>}/>
           <Route path='Brief/:id/tasks' element={<Task/>}/>
           
           

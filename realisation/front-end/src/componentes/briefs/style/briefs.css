@@ -97,3 +97,35 @@
     margin: 35px 5px;
 }
 
+.containerConsulterBrief{
+    padding: 40px 10rem;
+}
+
+.consulterBrief{
+    border: #2B3641 1px solid;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: white;
+}
+
+.titleBrief{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.detailBrief{
+    max-width: 700px;
+    padding: 20px;
+}
+
+.dateBrief{
+    display: flex;
+    padding: 30px;
+}
+
+.dateBrief >div{
+    width: 50%;
+    display: flex;
+    gap: 30px;
+}
