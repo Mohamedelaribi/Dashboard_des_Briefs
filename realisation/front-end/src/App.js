@@ -11,6 +11,7 @@ import SidBar from './componentes/SideBar/SideBar';
 import TopBar from './componentes/topBar/TopBar';
 import ConsulterBrief from './componentes/briefs/ConsulterBrief';
 import Task from './componentes/briefs/Task';
+import PlusDetail from './componentes/briefs/PlusDetail';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/Brief' element={<Brief/>}/>
           <Route path='/ConsulterBrief/:id' element={<ConsulterBrief/>}/>
           <Route path='Brief/:id/tasks' element={<Task/>}/>
+          <Route path='Brief/:id/plusdetail' element={<PlusDetail/>}/>
           
           
           </Routes>

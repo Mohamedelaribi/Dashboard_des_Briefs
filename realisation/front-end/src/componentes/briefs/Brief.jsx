@@ -35,7 +35,7 @@ function Brief() {
               <p className="detailBrief">{brief.detailBrief}</p>
             </div>
             <div className="buttons">
-              <Link to={'/plusDetail'}><button className='addBriefButton'>Plus Detail</button></Link>
+              <Link to={`./${brief.id}/plusdetail`}><button className='addBriefButton'>Plus Detail</button></Link>
               <Link to={`./${brief.id}/tasks`}><button className='TachesButton'>Taches</button></Link>
             </div>
             

@@ -21,9 +21,7 @@ function ConsulterBrief() {
 
   return (
     <div className='containerConsulterBrief'>
-      {/* {Brief.map(brief=>( */}
         <div className='consulterBrief'>
-        
         <div className="titleBrief">
           <h2 className='nameBrief'>{Brief.nameBrief}</h2>
           <span className="nambreOfTask">{Brief.task.length} taches</span>
@@ -42,7 +40,6 @@ function ConsulterBrief() {
 
         </div>
       </div>
-      {/* ))} */}
       
     </div>
   )
