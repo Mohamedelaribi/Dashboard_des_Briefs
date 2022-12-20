@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brief;
+use App\Models\Task;
+
 
 class GestionBrief extends Controller
 {
@@ -30,6 +32,7 @@ class GestionBrief extends Controller
     public function edit($id)
     {
         $editBrief = Brief::find($id);
+        $editBrief->task;
         return response()->json($editBrief);
     }
 
