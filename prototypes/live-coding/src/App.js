@@ -1,12 +1,15 @@
+import logo from './logo.svg';
 import './App.css';
-import Task from './components/Task';
-import TaskManager from './components/TaskManager';
+import ContextProvider from './context/ContextProvider';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
-      <TaskManager>
-        <Task/>
-      </TaskManager>
+    <div className="App">
+      <ContextProvider>
+        <TodoList/>
+      </ContextProvider>
+    </div>
   );
 }
 

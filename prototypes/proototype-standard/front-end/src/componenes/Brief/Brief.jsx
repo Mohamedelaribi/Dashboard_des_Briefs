@@ -1,29 +1,21 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Nav from '../Header/Nav'
+import { useContext } from 'react';
+import { BriefContext } from './BriefContext';
 
 function Brief() {
 
-  const [briefs,setBriefs] = useState([])
+  const {briefs, getAllBriefs , deleteBrief} = useContext(BriefContext)
   useEffect(()=>{
-    axios.get('http://127.0.0.1:8000/api/brief').then((reasponse) =>{
-    console.log(reasponse.data);  
-    setBriefs(reasponse.data);
-    });
+    getAllBriefs()
+
   },[]);
+  console.log(briefs);
 
 
 
-    const deleteBrief= (id, e)=>{
-      e.preventDefault();
-
-      axios.delete(`http://127.0.0.1:8000/api/brief/${id}`).then(res=>{
-        setBriefs(briefs.filter((item)=>item.id !== Number(id)));
-    });
-      
-    }
   return (
     <div>
         <Nav/>
@@ -47,7 +39,7 @@ function Brief() {
       <td>{Brief.detailBrief}</td>
       <td>{Brief.startDate}</td>
       <td>{Brief.endDate}</td>
-      <td><button onClick={(e)=>deleteBrief(Brief.id, e)}>delete</button>
+      <td><button onClick={()=>deleteBrief(Brief.id) }  >delete</button>
       <Link to={`/editeBrief/${Brief.id}`}>edit</Link></td>
     </tr>
 ))}

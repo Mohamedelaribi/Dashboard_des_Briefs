@@ -6,10 +6,11 @@ import Brief from './Brief/Brief';
 import Apprenant from './Header/Apprenant';
 import AddBrief from './Brief/AddBrief';
 import EditeBrief from './Brief/EditeBrief';
+import { BriefProvider } from './Brief/BriefContext';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BriefProvider>
         <Routes>
           <Route path='/' element={<Nav/>}/>
           <Route path='/Promotion' element={<Promotion/>} />
@@ -18,7 +19,7 @@ function App() {
           <Route path='/AddBrief' element={<AddBrief/>} />
           <Route path='/EditeBrief/:id' element={<EditeBrief/>} />
         </Routes>
-      </BrowserRouter>
+    </BriefProvider>
     </div>
   );
 }

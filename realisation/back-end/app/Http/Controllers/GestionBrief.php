@@ -32,18 +32,16 @@ class GestionBrief extends Controller
     public function edit($id)
     {
         $editBrief = Brief::find($id);
-        $editBrief->task;
         return response()->json($editBrief);
     }
 
     public function update(Request $request, $id)
     {
         $updateBrief = Brief::find($id);
-        $updateBrief->promotion_id = $request->promotion_id;
-        $updateBrief->nameBrief = $request->newNameBrief;
-        $updateBrief->detailBrief = $request->newDetailBrief;
-        $updateBrief->startDate = $request->newStartDate;
-        $updateBrief->endDate = $request->newEndDate;
+        $updateBrief->nameBrief = $request->nameBrief;
+        $updateBrief->detailBrief = $request->detailBrief;
+        $updateBrief->startDate = $request->startDate;
+        $updateBrief->endDate = $request->endDate;
         $updateBrief->save();
         return response()->json($updateBrief);
     }
